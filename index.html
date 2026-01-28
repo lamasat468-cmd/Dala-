@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="دلة الضيافة للحفلات والمناسبات - تأجير كنب، طاولات، كراسي، جلسات شعبية ومغربية، قهوجيين، صبابين، سماعات، دفايات، مكيفات بالدمام والخبر والظهران والجبيل والأحساء">
+    <meta name="keywords" content="تأجير كنب، ايجار كنب مفرد، كنب ثلاثي، تأجير طاولات، تأجير كراسي، حواجز، سجاد خزامي، عقود لمبات، جلسات شعبية، جلسات مغربية، جلسات شتوية، جلسات خارجية، تأجير سماعات، مكبرات صوت، تأجير دفايات، تأجير مكيفات، قهوجيين، صبابين، قهوجيات، ضيافة حفلات، الدمام، الخبر، الظهران، الجبيل، الأحساء">
+    <title>دلة الضيافة للحفلات والمناسبات | تأجير كنب وجلسات وقهوجيين بالدمام والخبر</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Header with animated background */
+        header {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .bg-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideShow 20s infinite;
+        }
+
+        .bg-slide:nth-child(1) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23a0522d" width="1200" height="800"/><circle cx="600" cy="400" r="200" fill="%23d4af37" opacity="0.3"/></svg>');
+            animation-delay: 0s;
+        }
+
+        .bg-slide:nth-child(2) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23654321" width="1200" height="800"/><rect x="300" y="200" width="600" height="400" fill="%23ffd700" opacity="0.2"/></svg>');
+            animation-delay: 5s;
+        }
+
+        .bg-slide:nth-child(3) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%238b4513" width="1200" height="800"/><polygon points="600,100 700,300 500,300" fill="%23daa520" opacity="0.3"/></svg>');
+            animation-delay: 10s;
+        }
+
+        .bg-slide:nth-child(4) {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23964b00" width="1200" height="800"/><circle cx="400" cy="300" r="150" fill="%23ffa500" opacity="0.25"/></svg>');
+            animation-delay: 15s;
+        }
+
+        @keyframes slideShow {
+            0% { opacity: 0; transform: scale(1); }
+            5% { opacity: 1; }
+            25% { opacity: 1; }
+            30% { opacity: 0; transform: scale(1.1); }
+            100% { opacity: 0; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 10;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px #ffd700); }
+            50% { filter: drop-shadow(0 0 20px #ffed4e); }
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #ffd700;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+        }
+
+        .btn-secondary:hover {
+            background: #ffd700;
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        /* Fixed contact buttons */
+        .fixed-contact {
+            position: fixed;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .fixed-call {
+            bottom: 100px;
+            left: 20px;
+        }
+
+        .fixed-whatsapp {
+            bottom: 100px;
+            right: 20px;
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 35px;
+            text-decoration: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .call-icon {
+            background: linear-gradient(45deg, #007bff, #00a8ff);
+        }
+
+        .whatsapp-icon {
+            background: linear-gradient(45deg, #25d366, #128c7e);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #16213e 0%, #0f1419 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #1e2a3a, #2d3e50);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,215,0,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffd700;
+            box-shadow: 0 15px 40px rgba(255,215,0,0.3);
+        }
+
+        .service-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .service-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .service-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,215,0,0.2);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-list li::before {
+            content: '✓';
+            color: #ffd700;
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 1.3rem;
+        }
+
+        .service-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .service-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255,215,0,0.5);
+        }
+
+        /* Keywords Section */
+        .keywords {
+            padding: 60px 20px;
+            background: #0f1419;
+        }
+
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .keyword-item {
+            background: linear-gradient(145deg, #1a2332, #243447);
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 4px solid #ffd700;
+            transition: all 0.3s;
+        }
+
+        .keyword-item:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.2);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0f1419 0%, #16213e 100%);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.3rem;
+            line-height: 2;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background: linear-gradient(145deg, #1e2a3a, #2d3e50);
+        }
+
+        .contact-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.5rem;
+            padding: 20px;
+            background: rgba(255,215,0,0.1);
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,215,0,0.2);
+            transform: scale(1.05);
+        }
+
+        .contact-item a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 3px solid #ffd700;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fixed-contact {
+                bottom: 80px;
+            }
+
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s;
+        }
+
+        .scroll-animate.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Contact Buttons -->
+    <div class="fixed-contact fixed-call">
+        <a href="tel:0544581522" class="contact-icon call-icon" title="اتصل الآن">
+            📞
+        </a>
+    </div>
+    <div class="fixed-contact fixed-whatsapp">
+        <a href="https://wa.me/966544581522" target="_blank" class="contact-icon whatsapp-icon" title="واتساب">
+            💬
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-bg">
+            <div class="bg-slide"></div>
+            <div class="bg-slide"></div>
+            <div class="bg-slide"></div>
+            <div class="bg-slide"></div>
+        </div>
+        <div class="header-content">
+            <h1>دلة الضيافة للحفلات والمناسبات</h1>
+            <p class="subtitle">خدمات متكاملة لجميع المناسبات والحفلات في المنطقة الشرقية</p>
+            <div class="cta-buttons">
+                <a href="tel:0544581522" class="cta-btn btn-primary">اتصل الآن 📞</a>
+                <a href="https://wa.me/966544581522" class="cta-btn btn-secondary">واتساب 💬</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">خدماتنا المتميزة</h2>
+        <div class="services-grid">
+            
+            <!-- Service 1: Furniture Rental -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🛋️</span>
+                <h3>تأجير الكنب والأثاث</h3>
+                <ul class="service-list">
+                    <li>تأجير كنب مفرد فاخر</li>
+                    <li>كنب ثلاثي للعائلات</li>
+                    <li>ايجار كنب VIP للمناسبات</li>
+                    <li>كنب ملكي للأفراح</li>
+                    <li>تأجير كنب أمريكي حديث</li>
+                    <li>ايجار كنب جلد طبيعي</li>
+                    <li>كنب استقبال للشركات</li>
+                    <li>تأجير كنب زاوية</li>
+                    <li>كنب حرف L للصالات الكبيرة</li>
+                    <li>ايجار كنب بتصاميم عصرية</li>
+                </ul>
+                <a href="tel:0544581522" class="service-btn">احجز الآن 📞</a>
+            </div>
+
+            <!-- Service 2: Tables and Chairs -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🪑</span>
+                <h3>تأجير الطاولات والكراسي</h3>
+                <ul class="service-list">
+                    <li>تأجير طاولات طعام فاخرة</li>
+                    <li>ايجار طاولات استقبال</li>
+                    <li>تأجير كراسي نابليون ذهبية</li>
+                    <li>كراسي شيفاري للأفراح</li>
+                    <li>ايجار طاولات بوفيه كبيرة</li>
+                    <li>تأجير طاولات كوكتيل</li>
+                    <li>كراسي بلاستيك للحفلات</li>
+                    <li>ايجار طاولات مستديرة</li>
+                    <li>تأجير كراسي ملكية VIP</li>
+                    <li>طاولات وكراسي للمؤتمرات</li>
+                </ul>
+                <a href="https://wa.me/966544581522" class="service-btn">واتساب 💬</a>
+            </div>
+
+            <!-- Service 3: Barriers and Decorations -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🎨</span>
+                <h3>الحواجز والديكورات</h3>
+                <ul class="service-list">
+                    <li>تأجير حواجز حديدية</li>
+                    <li>ايجار حواجز بلاستيكية للتنظيم</li>
+                    <li>تأجير سجاد خزامي فاخر</li>
+                    <li>سجاد أحمر للمناسبات الرسمية</li>
+                    <li>ايجار سجاد أخضر للحدائق</li>
+                    <li>تأجير عقود لمبات LED</li>
+                    <li>عقود إضاءة ملونة</li>
+                    <li>ايجار ستائر للقاعات</li>
+                    <li>تأجير زينة وبالونات</li>
+                    <li>ديكورات حفلات متكاملة</li>
+                </ul>
+                <a href="tel:0544581522" class="service-btn">اطلب عرض سعر 📞</a>
+            </div>
+
+            <!-- Service 4: Traditional Seating -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🏕️</span>
+                <h3>الجلسات الشعبية والمغربية</h3>
+                <ul class="service-list">
+                    <li>تأجير جلسات شعبية سعودية</li>
+                    <li>ايجار جلسات مغربية فاخرة</li>
+                    <li>تأجير جلسات شتوية دافئة</li>
+                    <li>جلسات خارجية للحدائق</li>
+                    <li>ايجار جلسات صيفية مريحة</li>
+                    <li>تأجير مجالس أرضية تراثية</li>
+                    <li>جلسات عربية بتصاميم حديثة</li>
+                    <li>ايجار خيام للمناسبات</li>
+                    <li>تأجير جلسات VIP للعزائم</li>
+                    <li>مجالس بأقمشة فاخرة ومخدات</li>
+                </ul>
+                <a href="https://wa.me/966544581522" class="service-btn">استفسر الآن 💬</a>
+            </div>
+
+            <!-- Service 5: Sound Systems -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🔊</span>
+                <h3>تأجير الأنظمة الصوتية</h3>
+                <ul class="service-list">
+                    <li>تأجير سماعات احترافية للحفلات</li>
+                    <li>ايجار مكبرات صوت قوية</li>
+                    <li>تأجير ميكروفونات لاسلكية</li>
+                    <li>أنظمة صوت للمؤتمرات</li>
+                    <li>ايجار مكسر صوت احترافي</li>
+                    <li>تأجير سماعات JBL للأفراح</li>
+                    <li>معدات DJ للحفلات</li>
+                    <li>ايجار شاشات عرض كبيرة</li>
+                    <li>تأجير بروجكتور للعروض</li>
+                    <li>أنظمة إضاءة ملونة للمسرح</li>
+                </ul>
+                <a href="tel:0544581522" class="service-btn">احجز معداتك 📞</a>
+            </div>
+
+            <!-- Service 6: Climate Control -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">❄️</span>
+                <h3>تأجير التكييف والتدفئة</h3>
+                <ul class="service-list">
+                    <li>تأجير دفايات كهربائية قوية</li>
+                    <li>ايجار دفايات غاز للخيام</li>
+                    <li>تأجير مكيفات متنقلة كبيرة</li>
+                    <li>مكيفات صحراوية للحفلات</li>
+                    <li>ايجار مراوح ضخمة صناعية</li>
+                    <li>تأجير مبردات هواء متحركة</li>
+                    <li>دفايات هرمية للحدائق</li>
+                    <li>ايجار مكيفات سبليت متنقلة</li>
+                    <li>تأجير أجهزة تبريد للصيف</li>
+                    <li>حلول تكييف شاملة للفعاليات</li>
+                </ul>
+                <a href="https://wa.me/966544581522" class="service-btn">اتصل للحجز 💬</a>
+            </div>
+
+            <!-- Service 7: Coffee Servers -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">☕</span>
+                <h3>قهوجيين وصبابين محترفين</h3>
+                <ul class="service-list">
+                    <li>قهوجيين وقهوجيات حفلات محترفين</li>
+                    <li>افضل قهوجي خبرة بجميع انواع المشروبات بالدمام</li>
+                    <li>لدينا قهوجية للحفلات والمناسبات</li>
+                    <li>ارقام قهوجيات وقهوجية متاحة 24 ساعة</li>
+                    <li>قهوجي وقهوجيه الخبر محترفين</li>
+                    <li>قهوجيين وقهوجية خبرة بصنع القهوة العربية</li>
+                    <li>افضل قهوجي وصباب قهوة عربي وشاي خبرة بالدمام</li>
+                    <li>قهوجيين وقهوجيات الخبر والظهران</li>
+                    <li>قهوجيات فليبنيات وقهوجيين رجال</li>
+                    <li>لدينا افضل قهوجية وقهوجيات مدربين في تنظيم الحفلات والمناسبات بالدمام</li>
+                    <li>خبرة في مجال تنسيق الافراح والمناسبات الخاصة</li>
+                    <li>يوجد افضل مباشرات في مجال الضيافة ذو كفاءة عالية</li>
+                    <li>توفر افضل فريق متخصص من قهوجيين على دراية كاملة بجميع المناسبات والحفلات</li>
+                    <li>نوفر قهوجيات نساء ايضا بأعلى مستوى من الخدمة</li>
+                    <li>افضل قهوجيين رجال خبرة في الدمام</li>
+                    <li>قهوجي وقهوجيات نساء للمؤتمرات</li>
+                    <li>لدينا قهوجيات نساء وقهوجين رجال علي اعلي مستوي</li>
+                    <li>تنسيق وتنظيم جميع الحفلات والمناسبات</li>
+                    <li>قهوجي وصبابين قهوة للحفلات الكبيرة</li>
+                    <li>ارقام قهوجيات للافراح ومناسبات</li>
+                </ul>
+                <a href="tel:0544581522" class="service-btn">خصم 30% اتصل الآن 📞</a>
+            </div>
+
+            <!-- Additional Coffee Service Details -->
+            <div class="service-card scroll-animate">
+                <span class="service-icon">🫖</span>
+                <h3>خدمات القهوة والضيافة المتميزة</h3>
+                <ul class="service-list">
+                    <li>خصم 30% قهوجين وصبابين قهوة</li>
+                    <li>قهوجيات وقهوجين متخصصون حفلات</li>
+                    <li>ارقام قهوجين وصبابين بالدمام</li>
+                    <li>افضل خدمة قهوجيات وصبابين قهوة</li>
+                    <li>رقم قهوجي وصبابين قهوة بالدمام</li>
+                    <li>رقم قهوجي محترف للحفلات بالخبر</li>
+                    <li>قهوجي وصبابين خدمة 24 ساعة اتصل</li>
+                    <li>ارقام قهوجيات وقهوجي حفلات</li>
+                    <li>خدمة قهوجيين وصبابين قهوة</li>
+                    <li>قهوجي وصبابين قهوه للحفلات</li>
+                    <li>قهوجيات وقهوجين خدمة متميزة</li>
+                    <li>افضل قهوجي وقهوجيات فلبينيات</li>
+                    <li>قهوجيات وصبابين قهوة بالخبر</li>
+                    <li>صبابين ومباشرات للمناسبات</li>
+                    <li>ضيافة كاملة للأفراح والعزائم</li>
+                    <li>قهوة عربية أصلية طازجة</li>
+                    <li>شاي وقهوة ومشروبات ساخنة</li>
+                    <li>عصائر طازجة ومشروبات باردة</li>
+                    <li>حلويات وتمور فاخرة</li>
+                    <li>خدمة ضيافة شاملة للمناسبات</li>
+                </ul>
+                <a href="https://wa.me/966544581522" class="service-btn">واتساب للحجز 💬</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Keywords for SEO -->
+    <section class="keywords">
+        <h2 class="section-title">نخدم جميع مناطق الشرقية</h2>
+        <div class="keywords-grid">
+            <div class="keyword-item">✓ خدمات تأجير حفلات بالدمام والخبر</div>
+            <div class="keyword-item">✓ ايجار كنب وجلسات بالظهران</div>
+            <div class="keyword-item">✓ تأجير معدات حفلات بالجبيل</div>
+            <div class="keyword-item">✓ قهوجيين وصبابين بالأحساء</div>
+            <div class="keyword-item">✓ تأجير طاولات وكراسي للمناسبات</div>
+            <div class="keyword-item">✓ ايجار سماعات ومكبرات صوت</div>
+            <div class="keyword-item">✓ جلسات شعبية ومغربية فاخرة</div>
+            <div class="keyword-item">✓ تأجير دفايات ومكيفات للحفلات</div>
+            <div class="keyword-item">✓ خدمات ضيافة متكاملة للأفراح</div>
+            <div class="keyword-item">✓ تنظيم حفلات ومناسبات المنطقة الشرقية</div>
+            <div class="keyword-item">✓ كنب مفرد وثلاثي للإيجار</div>
+            <div class="keyword-item">✓ حواجز وسجاد خزامي للمناسبات</div>
+            <div class="keyword-item">✓ عقود لمبات وإضاءة للحفلات</div>
+            <div class="keyword-item">✓ جلسات شتوية وصيفية مريحة</div>
+            <div class="keyword-item">✓ معدات صوتية احترافية للإيجار</div>
+            <div class="keyword-item">✓ قهوجيات فلبينيات محترفات</div>
+            <div class="keyword-item">✓ صبابين قهوة عربية أصيلة</div>
+            <div class="keyword-item">✓ مباشرات وضيافة للمؤتمرات</div>
+            <div class="keyword-item">✓ تأجير خيام ومظلات للحدائق</div>
+            <div class="keyword-item">✓ ديكورات وزينة فاخرة للأفراح</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">عن دلة الضيافة</h2>
+        <div class="about-content scroll-animate">
+            <p>
+                دلة الضيافة للحفلات والمناسبات هي الخيار الأول والأمثل لجميع احتياجاتكم في المنطقة الشرقية. نحن نقدم خدمات متكاملة وشاملة لتأجير جميع مستلزمات الحفلات والمناسبات بأعلى جودة وأفضل الأسعار التنافسية في السوق.
+            </p>
+            <p>
+                لدينا خبرة طويلة تمتد لسنوات في مجال تنظيم وتجهيز الحفلات والمناسبات الخاصة والعامة، حيث نوفر كل ما تحتاجونه من تأجير الكنب الفاخر بأنواعه المختلفة (مفرد، ثلاثي، ملكي)، الطاولات والكراسي بتصاميم متنوعة وعصرية، الجلسات الشعبية والمغربية الأصيلة، المعدات الصوتية الاحترافية، أنظمة التكييف والتدفئة، بالإضافة إلى خدمات القهوجيين والصبابين المحترفين.
+            </p>
+            <p>
+                نحن نفخر بتقديم أفضل خدمة للعملاء مع فريق عمل محترف ومدرب على أعلى مستوى من الكفاءة والخبرة. نخدم جميع مدن ومحافظات المنطقة الشرقية بما في ذلك الدمام، الخبر، الظهران، الجبيل، والأحساء، ونسعى دائماً لتحقيق رضا عملائنا الكرام من خلال تقديم خدمات متميزة بأسعار مناسبة للجميع.
+            </p>
+            <p>
+                سواء كنتم تخططون لحفل زفاف فاخر، عزيمة عائلية، مناسبة خاصة، مؤتمر، أو أي فعالية أخرى، فإن دلة الضيافة هي شريككم الموثوق لإنجاح مناسبتكم وجعلها لا تُنسى. نحن نوفر لكم كل ما تحتاجونه تحت سقف واحد بجودة عالية واحترافية تامة.
+            </p>
+            <p>
+                اتصلوا بنا اليوم على الرقم <strong>0544581522</strong> أو تواصلوا معنا عبر الواتساب للحصول على استشارة مجانية وعرض سعر مخصص يناسب احتياجاتكم وميزانيتكم. نحن في خدمتكم على مدار الساعة!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">اتصل بنا</h2>
+        <div class="contact-info">
+            <p style="font-size: 1.4rem; margin-bottom: 30px;">
+                نحن في خدمتكم على مدار الساعة. لا تترددوا في التواصل معنا لأي استفسار أو حجز
+            </p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:0544581522">0544581522</a>
+                </div>
+                <div class="contact-item">
+                    <span>💬</span>
+                    <a href="https://wa.me/966544581522" target="_blank">واتساب: 0544581522</a>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>نخدم جميع مناطق الشرقية: الدمام - الخبر - الظهران - الجبيل - الأحساء</span>
+                </div>
+                <div class="contact-item">
+                    <span>⏰</span>
+                    <span>متاحون 24/7 - طوال أيام الأسبوع</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3 style="color: #ffd700; margin-bottom: 15px;">دلة الضيافة للحفلات والمناسبات</h3>
+            <p>خدمات متكاملة لجميع المناسبات في المنطقة الشرقية</p>
+            <p style="margin-top: 15px;">هاتف: <a href="tel:0544581522" style="color: #ffd700;">0544581522</a></p>
+            <p>الدمام | الخبر | الظهران | الجبيل | الأحساء</p>
+            <div class="social-links">
+                <a href="tel:0544581522" class="social-icon" title="اتصل">📞</a>
+                <a href="https://wa.me/966544581522" class="social-icon" title="واتساب">💬</a>
+            </div>
+            <p style="margin-top: 30px; color: #888;">© 2026 دلة الضيافة. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
