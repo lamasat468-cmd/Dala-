@@ -9,6 +9,9 @@
   <meta name="description" content="دله الضيافة أفضل شركة تأجير كنب فاخر، طاولات وكراسي، جلسات شعبية ومغربية، سماعات ومكبرات صوت، دفايات ومكيفات، قهوجيين وصبابين محترفين في الدمام والخبر والظهران والجبيل والأحساء">
   <meta name="keywords" content="تأجير كنب الدمام, ايجار كنب الخبر, تأجير طاولات وكراسي الدمام, تأجير جلسات شعبية الدمام, قهوجيين الدمام, صبابين الخبر, تأجير سماعات الدمام, تأجير دفايات الدمام, تأجير مكيفات الخبر, قهوجيات الدمام, كنب مفرد للايجار, كنب ثلاثي للتأجير, جلسات مغربية الخبر, جلسات شتوية للايجار, جلسات خارجية الدمام, حواجز للتأجير, سجاد خزامي الدمام, عقود لمبات للايجار">
   
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- Preload Critical Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +29,8 @@
       --accent-red: #8b0000;
       --text-dark: #1a1a1a;
       --shadow-gold: rgba(212, 175, 55, 0.3);
+      --whatsapp-green: #25d366;
+      --whatsapp-dark-green: #128c7e;
       --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%);
       --gradient-dark: linear-gradient(180deg, #2c1810 0%, #1a0f08 100%);
     }
@@ -210,7 +215,7 @@
       height: 100%;
       background: 
         linear-gradient(rgba(44, 24, 16, 0.7), rgba(26, 15, 8, 0.8)),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232c1810" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="%23d4af37" opacity="0.1"/><circle cx="900" cy="400" r="150" fill="%238b0000" opacity="0.1"/></svg>');
+        url('https://i.postimg.cc/K8CHLRJf/IMG-20250326-WA0025.jpg');
       background-size: cover;
       background-position: center;
       animation: heroZoom 30s ease-in-out infinite;
@@ -342,7 +347,7 @@
     }
 
     .whatsapp-btn {
-      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      background: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--whatsapp-dark-green) 100%);
     }
 
     .call-btn {
@@ -456,15 +461,28 @@
       background: linear-gradient(135deg, #2c1810 0%, #1a0f08 100%);
     }
 
-    .service-image img {
+    .service-images-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      height: 100%;
+    }
+
+    .service-image-single {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .service-image-single img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s ease;
     }
 
-    .service-card:hover .service-image img {
-      transform: scale(1.1) rotate(2deg);
+    .service-card:hover .service-image-single img {
+      transform: scale(1.1);
     }
 
     .service-icon {
@@ -553,24 +571,56 @@
       font-size: 1.2rem;
     }
 
-    .cta-button {
-      display: inline-block;
-      background: var(--gradient-gold);
-      color: var(--deep-brown);
-      padding: 14px 35px;
+    .service-contact-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .service-whatsapp-btn,
+    .service-call-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 25px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.95rem;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
-      margin-top: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      flex: 1;
+      min-width: 140px;
     }
 
-    .cta-button:hover {
+    .service-whatsapp-btn {
+      background: linear-gradient(135deg, var(--whatsapp-green) 0%, var(--whatsapp-dark-green) 100%);
+      color: white;
+    }
+
+    .service-call-btn {
+      background: var(--gradient-gold);
+      color: var(--deep-brown);
+    }
+
+    .service-whatsapp-btn:hover,
+    .service-call-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-whatsapp-btn:hover {
+      background: linear-gradient(135deg, #1da851 0%, #0e7a5e 100%);
+    }
+
+    .service-call-btn:hover {
       background: linear-gradient(135deg, #f4d03f 0%, #d4af37 100%);
+    }
+
+    .service-btn-icon {
+      font-size: 1.2rem;
     }
 
     /* Qahwaji Section - Special Design */
@@ -846,6 +896,10 @@
       .contact-icon {
         font-size: 1.7rem;
       }
+
+      .service-images-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 600px) {
@@ -877,6 +931,15 @@
       .footer-grid {
         grid-template-columns: 1fr;
       }
+
+      .service-contact-buttons {
+        flex-direction: column;
+      }
+
+      .service-whatsapp-btn,
+      .service-call-btn {
+        width: 100%;
+      }
     }
 
     /* Scroll Animations */
@@ -899,10 +962,10 @@
   <!-- Fixed Contact Buttons -->
   <div class="fixed-contacts">
     <a href="https://wa.me/966544581522" target="_blank" class="whatsapp-btn" aria-label="واتساب">
-      <span class="contact-icon">📱</span>
+      <i class="fab fa-whatsapp contact-icon"></i>
     </a>
     <a href="tel:0544581522" class="call-btn" aria-label="اتصل الآن">
-      <span class="contact-icon">📞</span>
+      <i class="fas fa-phone-alt contact-icon"></i>
     </a>
   </div>
 
@@ -955,18 +1018,16 @@
       <!-- Service 1: Kanab -->
       <div class="service-card" id="kanab">
         <div class="service-image">
-         <img 
-    src="https://i.postimg.cc/g0sTfp9P/Whats-App-Image-2026-01-27-at-2-54-14-PM.jpg" 
-    alt="تأجير تجهيزات حفلات ومناسبات في الدمام" 
-    width="600" height="400" 
-    loading="lazy" />
-    
-  <img 
-    src="https://i.postimg.cc/NG2wryvh/Whats-App-Image-2026-01-27-at-2-54-16-PM-(1).jpg" 
-    alt="تأجير جلسات وديكور مناسبات فخمة" 
-    width="400" height="300" 
-    loading="lazy" />
-        
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/g0sTfp9P/Whats-App-Image-2026-01-27-at-2-54-14-PM.jpg" alt="تأجير كنب فاخر في الدمام" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/NG2wryvh/Whats-App-Image-2026-01-27-at-2-54-16-PM-(1).jpg" alt="كنب ثلاثي فاخر للايجار" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+        </div>
         <div class="service-content">
           <h3>تأجير كنب فاخر ومجالس ملكية</h3>
           <p>نوفر أفضل خدمة تأجير كنب فاخر في الدمام والخبر والظهران. لدينا تشكيلة واسعة من الكنب المخملي الفاخر، الكنب المفرد والثلاثي، والمجالس الملكية التي تناسب جميع المناسبات.</p>
@@ -977,9 +1038,6 @@
             <span class="keyword-tag">كنب مفرد للايجار</span>
             <span class="keyword-tag">كنب ثلاثي فاخر</span>
             <span class="keyword-tag">مجالس ملكية</span>
-            <span class="keyword-tag">كنب مخملي الظهران</span>
-            <span class="keyword-tag">تأجير كنب الجبيل</span>
-            <span class="keyword-tag">كنب للمناسبات</span>
           </div>
 
           <ul class="service-features">
@@ -988,29 +1046,32 @@
             <li>مجالس ملكية كاملة للاستقبالات الفخمة</li>
             <li>كنب جلد طبيعي وصناعي عالي الجودة</li>
             <li>توصيل وتركيب مجاني في جميع مناطق الخدمة</li>
-            <li>أسعار تنافسية مع خصومات للكميات الكبيرة</li>
           </ul>
           
-          <a href="tel:0544581522" class="cta-button">احجز الآن - 0544581522</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
 
-     <!-- Service 2: Tables & Chairs -->
-<div class="service-card" id="tables">
-  <div class="service-image">
-    <div class="images-container">
-     <img 
-    src="https://i.postimg.cc/3rvPxPmg/Whats-App-Image-2026-01-27-at-2-54-15-PM.jpg" 
-    alt="تأجير كراسي وطاولات للمناسبات" 
-    width="400" height="300" 
-    loading="lazy" />
-    
-  <img 
-    src="https://i.postimg.cc/Jz2qJhWG/Whats-App-Image-2026-01-27-at-2-55-00-PM.jpg" 
-    alt="تأجير مستلزمات حفلات وأفراح في الشرقية" 
-    width="400" height="300" 
-    loading="lazy" />
-       </div>
+      <!-- Service 2: Tables & Chairs -->
+      <div class="service-card" id="tables">
+        <div class="service-image">
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/3rvPxPmg/Whats-App-Image-2026-01-27-at-2-54-15-PM.jpg" alt="تأجير طاولات وكراسي" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/Jz2qJhWG/Whats-App-Image-2026-01-27-at-2-55-00-PM.jpg" alt="كراسي نابليون فاخرة" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-chair"></i></div>
+        </div>
         <div class="service-content">
           <h3>تأجير طاولات وكراسي للحفلات</h3>
           <p>خدمة تأجير طاولات وكراسي شاملة لجميع أنواع المناسبات في الدمام والخبر. نوفر طاولات مختلفة الأحجام والأشكال مع كراسي فاخرة ومريحة تناسب جميع أعداد الضيوف.</p>
@@ -1021,8 +1082,6 @@
             <span class="keyword-tag">طاولات دائرية</span>
             <span class="keyword-tag">كراسي نابليون</span>
             <span class="keyword-tag">طاولات مستطيلة</span>
-            <span class="keyword-tag">كراسي شفاف</span>
-            <span class="keyword-tag">تأجير طاولات وكراسي الظهران</span>
           </div>
 
           <ul class="service-features">
@@ -1031,18 +1090,31 @@
             <li>كراسي شفاف عصرية وأنيقة</li>
             <li>طاولات بوفيه وطاولات استقبال</li>
             <li>أغطية طاولات فاخرة (ساتان، دانتيل، قطن)</li>
-            <li>خدمة ترتيب وتنسيق كاملة</li>
           </ul>
           
-          <a href="https://wa.me/966544581522" target="_blank" class="cta-button">واتساب للحجز</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Service 3: Popular Sessions -->
       <div class="service-card" id="jalsat">
         <div class="service-image">
-          <div class="service-icon">🏕️</div>
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%232c1810' width='800' height='600'/%3E%3Cg opacity='0.3'%3E%3Crect x='100' y='250' width='600' height='200' rx='15' fill='%23d4af37'/%3E%3Ccircle cx='250' cy='350' r='30' fill='%238b0000'/%3E%3Ccircle cx='400' cy='350' r='30' fill='%238b0000'/%3E%3Ccircle cx='550' cy='350' r='30' fill='%238b0000'/%3E%3C/g%3E%3C/svg%3E" alt="تأجير جلسات شعبية الدمام">
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/KYjWSVmH/Whats-App-Image-2026-01-27-at-2-54-16-PM-(2).jpg" alt="جلسات شعبية الدمام" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/Y2xZV2CG/IMG-20250917-WA0011.jpg" alt="جلسات مغربية الخبر" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-campground"></i></div>
         </div>
         <div class="service-content">
           <h3>تأجير جلسات شعبية ومغربية</h3>
@@ -1053,9 +1125,7 @@
             <span class="keyword-tag">جلسات مغربية الخبر</span>
             <span class="keyword-tag">جلسات شتوية</span>
             <span class="keyword-tag">جلسات خارجية</span>
-            <span class="keyword-tag">تأجير جلسات الظهران</span>
             <span class="keyword-tag">جلسات ارضية</span>
-            <span class="keyword-tag">تأجير جلسات الجبيل</span>
           </div>
 
           <ul class="service-features">
@@ -1064,18 +1134,31 @@
             <li>جلسات شتوية دافئة ومريحة</li>
             <li>جلسات خارجية مقاومة للعوامل الجوية</li>
             <li>وسائد ومساند بتصاميم تراثية</li>
-            <li>سجاد وديكورات مكملة للجلسات</li>
           </ul>
           
-          <a href="tel:0544581522" class="cta-button">اطلب عرض سعر</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Service 4: Sound Systems -->
       <div class="service-card" id="samaat">
         <div class="service-image">
-          <div class="service-icon">🔊</div>
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%232c1810' width='800' height='600'/%3E%3Cg opacity='0.3'%3E%3Crect x='200' y='200' width='150' height='200' rx='10' fill='%23d4af37'/%3E%3Crect x='450' y='200' width='150' height='200' rx='10' fill='%23d4af37'/%3E%3Ccircle cx='275' cy='300' r='40' fill='%238b0000'/%3E%3Ccircle cx='525' cy='300' r='40' fill='%238b0000'/%3E%3C/g%3E%3C/svg%3E" alt="تأجير سماعات ومكبرات صوت الدمام">
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/90X8VTQm/IMG-20250326-WA0035.jpg" alt="تأجير سماعات احترافية" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/KYnJMQK1/IMG-20250628-WA0016.jpg" alt="معدات صوت للمناسبات" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-volume-up"></i></div>
         </div>
         <div class="service-content">
           <h3>تأجير سماعات ومكبرات صوت</h3>
@@ -1087,7 +1170,6 @@
             <span class="keyword-tag">سماعات احترافية</span>
             <span class="keyword-tag">تأجير معدات صوت</span>
             <span class="keyword-tag">اجهزة صوت الظهران</span>
-            <span class="keyword-tag">تأجير ميكروفونات</span>
           </div>
 
           <ul class="service-features">
@@ -1096,18 +1178,31 @@
             <li>ميكروفونات لاسلكية ومايكات يدوية</li>
             <li>اجهزة دي جي ومكساج احترافية</li>
             <li>فني صوت متخصص للإشراف</li>
-            <li>اسعار مناسبة لجميع الميزانيات</li>
           </ul>
           
-          <a href="https://wa.me/966544581522" target="_blank" class="cta-button">تواصل واتساب</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Service 5: Heaters & AC -->
       <div class="service-card">
         <div class="service-image">
-          <div class="service-icon">❄️</div>
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%232c1810' width='800' height='600'/%3E%3Cg opacity='0.3'%3E%3Crect x='150' y='200' width='200' height='250' rx='15' fill='%23d4af37'/%3E%3Crect x='450' y='200' width='200' height='250' rx='15' fill='%23d4af37'/%3E%3Crect x='180' y='230' width='140' height='180' rx='10' fill='%238b0000'/%3E%3Crect x='480' y='230' width='140' height='180' rx='10' fill='%238b0000'/%3E%3C/g%3E%3C/svg%3E" alt="تأجير دفايات ومكيفات الدمام">
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/vHNqF4Rp/IMG-20250628-WA0004.jpg" alt="تأجير دفايات ومكيفات" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/qMGDt0RX/Whats-App-Image-2026-01-27-at-2-54-15-PM-(3).jpg" alt="دفايات خارجية للشتاء" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-snowflake"></i></div>
         </div>
         <div class="service-content">
           <h3>تأجير دفايات ومكيفات</h3>
@@ -1118,7 +1213,6 @@
             <span class="keyword-tag">ايجار مكيفات الخبر</span>
             <span class="keyword-tag">دفايات خارجية</span>
             <span class="keyword-tag">مكيفات متحركة</span>
-            <span class="keyword-tag">تأجير دفايات الظهران</span>
             <span class="keyword-tag">مكيفات صحراوية</span>
           </div>
 
@@ -1128,18 +1222,31 @@
             <li>مكيفات متحركة بقدرات مختلفة</li>
             <li>مكيفات صحراوية للمناسبات الخارجية</li>
             <li>خدمة صيانة وتشغيل متكاملة</li>
-            <li>توصيل وتركيب في نفس اليوم</li>
           </ul>
           
-          <a href="tel:0544581522" class="cta-button">احجز الآن</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Service 6: Accessories -->
       <div class="service-card">
         <div class="service-image">
-          <div class="service-icon">✨</div>
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect fill='%232c1810' width='800' height='600'/%3E%3Cg opacity='0.3'%3E%3Crect x='100' y='400' width='600' height='30' fill='%23d4af37'/%3E%3Crect x='100' y='350' width='600' height='30' fill='%23d4af37'/%3E%3Ccircle cx='200' cy='200' r='20' fill='%23d4af37'/%3E%3Ccircle cx='300' cy='180' r='20' fill='%23d4af37'/%3E%3Ccircle cx='400' cy='200' r='20' fill='%23d4af37'/%3E%3Ccircle cx='500' cy='180' r='20' fill='%23d4af37'/%3E%3Ccircle cx='600' cy='200' r='20' fill='%23d4af37'/%3E%3C/g%3E%3C/svg%3E" alt="تأجير سجاد وحواجز ولمبات الدمام">
+          <div class="service-images-grid">
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/g0sTfp9P/Whats-App-Image-2026-01-27-at-2-54-14-PM.jpg" alt="تأجير سجاد وحواجز" loading="lazy">
+            </div>
+            <div class="service-image-single">
+              <img src="https://i.postimg.cc/NG2wryvh/Whats-App-Image-2026-01-27-at-2-54-16-PM-(1).jpg" alt="عقود لمبات ديكورية" loading="lazy">
+            </div>
+          </div>
+          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
         </div>
         <div class="service-content">
           <h3>تأجير حواجز وسجاد وعقود لمبات</h3>
@@ -1150,7 +1257,6 @@
             <span class="keyword-tag">سجاد خزامي الخبر</span>
             <span class="keyword-tag">عقود لمبات</span>
             <span class="keyword-tag">تأجير سجاد فاخر</span>
-            <span class="keyword-tag">حواجز ديكور</span>
             <span class="keyword-tag">اضاءة ديكورية</span>
           </div>
 
@@ -1160,10 +1266,16 @@
             <li>عقود لمبات ديكورية متنوعة</li>
             <li>إنارة LED ملونة للأجواء الاحتفالية</li>
             <li>ممرات مضيئة للعرائس والمناسبات</li>
-            <li>تنسيق وترتيب احترافي</li>
           </ul>
           
-          <a href="https://wa.me/966544581522" target="_blank" class="cta-button">استفسر الآن</a>
+          <div class="service-contact-buttons">
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn">
+              <i class="fab fa-whatsapp service-btn-icon"></i> واتساب
+            </a>
+            <a href="tel:0544581522" class="service-call-btn">
+              <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1179,160 +1291,35 @@
 
       <div class="qahwaji-grid">
         <div class="qahwaji-card">
-          <h4>⭐ قهوجيين وقهوجيات حفلات</h4>
+          <h4><i class="fas fa-mug-hot"></i> قهوجيين وقهوجيات حفلات</h4>
           <p>فريق محترف من قهوجيين رجال وقهوجيات نساء ذوي خبرة واسعة في خدمة جميع أنواع المناسبات والحفلات بالدمام والخبر</p>
         </div>
 
         <div class="qahwaji-card">
-          <h4>⭐ افضل قهوجي خبرة بجميع انواع المشروبات</h4>
+          <h4><i class="fas fa-coffee"></i> افضل قهوجي خبرة</h4>
           <p>قهوجيين متخصصين في إعداد القهوة العربية، الشاي، المشروبات الساخنة والباردة بأعلى معايير الجودة في الدمام</p>
         </div>
 
         <div class="qahwaji-card">
-          <h4>⭐ قهوجية للحفلات والمناسبات</h4>
+          <h4><i class="fas fa-user-tie"></i> قهوجية للحفلات</h4>
           <p>لدينا قهوجية محترفات للحفلات النسائية والمناسبات الخاصة، مدربات على أرقى مستويات الخدمة والضيافة</p>
         </div>
 
         <div class="qahwaji-card">
-          <h4>⭐ ارقام قهوجيات وقهوجية</h4>
-          <p>للحجز المباشر: 0544581522 - نوفر قهوجيات وقهوجيين جاهزين للخدمة الفورية في جميع مناطق الدمام والخبر والظهران</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجي وقهوجيه الخبر والدمام</h4>
-          <p>خدمة قهوجيين متميزة تشمل الخبر، الدمام، الظهران، الجبيل، والأحساء مع ضمان الجودة والالتزام بالمواعيد</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيين خبرة بصنع القهوة العربية</h4>
-          <p>صبابين قهوة محترفين يتقنون صنع القهوة العربية الأصيلة بنكهاتها المتعددة (هيل، زعفران، قرنفل)</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ افضل قهوجي وصباب قهوة عربي وشاى</h4>
-          <p>قهوجيين متمرسين في تقديم القهوة العربية والشاي بالطريقة التقليدية الأصيلة مع لمسة عصرية احترافية</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيين وقهوجيات الخبر الدمام الظهران</h4>
-          <p>تغطية شاملة لكافة مناطق المنطقة الشرقية بفريق كامل من القهوجيين والقهوجيات المدربين</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيات فليبنيات وقهوجيين رجال</h4>
-          <p>نوفر قهوجيات فلبينيات محترفات وقهوجيين سعوديين ومقيمين ذوي كفاءة عالية في الضيافة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ افضل قهوجية وقهوجيات مدربين</h4>
-          <p>فريقنا من القهوجيات مدرب على تنظيم وخدمة الحفلات والمناسبات الكبرى بكل احترافية بالدمام</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ خبرة في تنسيق الافراح والمناسبات</h4>
-          <p>مباشرات في مجال الضيافة ذوات كفاءة عالية، متخصصات في تنسيق الأفراح والمناسبات الخاصة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ فريق متخصص للمؤتمرات والافراح</h4>
-          <p>قهوجيين على دراية كاملة بخدمة المناسبات والحفلات والمؤتمرات والأفراح بأعلى مستوى احترافي</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيات نساء بأعلى مستوى خدمة</h4>
-          <p>نوفر قهوجيات نساء محترفات بأعلى مستوى من الخدمة في جميع مناطق الشرقية والدمام والخبر</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ افضل قهوجيين رجال خبرة</h4>
-          <p>قهوجيين رجال بخبرة طويلة في خدمة المناسبات الرسمية والعائلية والحفلات الكبرى</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجي وقهوجيات نساء</h4>
-          <p>لدينا قهوجيات نساء وقهوجيين رجال على أعلى مستوى من الخدمة والاحترافية في التعامل مع الضيوف</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ تنسيق وتنظيم جميع المناسبات</h4>
-          <p>قهوجي وصبابين قهوة للحفلات مع خدمة تنسيق وتنظيم المناسبات والمؤتمرات بشكل كامل</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ ارقام قهوجيات للافراح ومناسبات</h4>
-          <p>للحجز الفوري: 0544581522 - خدمة قهوجيات متاحة على مدار الساعة لجميع أنواع المناسبات</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ خصم 30% قهوجين وصبابين قهوة</h4>
-          <p>عروض وخصومات مميزة تصل إلى 30% على خدمات القهوجيين والصبابين للحجوزات المبكرة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيات وقهوجين متخصصون حفلات</h4>
-          <p>فريق متخصص من قهوجيات وقهوجيين محترفين في خدمة الحفلات والمناسبات الخاصة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ ارقام قهوجين وصبابين بالدمام</h4>
-          <p>للتواصل: 0544581522 - أرقام قهوجيين وصبابين في الدمام متاحة للحجز المباشر</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ افضل خدمة قهوجيات وصبابين</h4>
-          <p>نفخر بتقديم أفضل خدمة قهوجيات وصبابين قهوة في المنطقة الشرقية بأسعار تنافسية</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ رقم قهوجي وصبابين قهوة بالدمام</h4>
-          <p>اتصل الآن: 0544581522 - رقم قهوجي محترف للحفلات متاح 24 ساعة في الدمام والخبر</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ رقم قهوجي محترف للحفلات</h4>
-          <p>رقم قهوجي محترف للحفلات بالخبر والدمام: 0544581522 - خدمة سريعة واحترافية</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجي وصبابين خدمة 24 ساعة</h4>
-          <p>خدمة قهوجيين وصبابين متاحة على مدار 24 ساعة - اتصل الآن للحجز الفوري في أي وقت</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ ارقام قهوجيات وقهوجي حفلات</h4>
-          <p>أرقام مباشرة لقهوجيات وقهوجيين حفلات في الدمام والخبر: 0544581522</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ خدمة قهوجيين وصبابين قهوة</h4>
-          <p>خدمة متكاملة من قهوجيين وصبابين قهوة محترفين مع توفير جميع مستلزمات الضيافة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجي وصبابين قهوه للحفلات</h4>
-          <p>قهوجي وصبابين قهوة للحفلات والمناسبات الخاصة في جميع مناطق المنطقة الشرقية</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيات وقهوجين خدمة متميزة</h4>
-          <p>قهوجيات وقهوجيين يقدمون خدمة متميزة واحترافية تليق بمستوى مناسباتكم الخاصة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ افضل قهوجي وقهوجيات فلبينيات</h4>
-          <p>نوفر أفضل قهوجي وقهوجيات فلبينيات محترفات بخبرة عالية في الضيافة والخدمة</p>
-        </div>
-
-        <div class="qahwaji-card">
-          <h4>⭐ قهوجيات وصبابين قهوة بالخبر</h4>
-          <p>قهوجيات وصبابين قهوة في المنطقة الشرقية: الدمام، الخبر، الظهران، الجبيل، الأحساء</p>
+          <h4><i class="fas fa-phone-alt"></i> ارقام قهوجيات</h4>
+          <p>للحجز المباشر: 0544581522 - نوفر قهوجيات وقهوجيين جاهزين للخدمة الفورية في جميع مناطق الدمام</p>
         </div>
       </div>
 
       <div style="text-align: center; margin-top: 50px;">
-        <a href="tel:0544581522" class="cta-button" style="font-size: 1.2rem; padding: 18px 45px;">
-          📞 احجز قهوجيين الآن - 0544581522
-        </a>
+        <div class="service-contact-buttons" style="justify-content: center; gap: 30px;">
+          <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn" style="font-size: 1.2rem; padding: 18px 35px;">
+            <i class="fab fa-whatsapp service-btn-icon"></i> واتساب للحجز
+          </a>
+          <a href="tel:0544581522" class="service-call-btn" style="font-size: 1.2rem; padding: 18px 35px;">
+            <i class="fas fa-phone-alt service-btn-icon"></i> اتصل الآن 0544581522
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1371,7 +1358,7 @@
 
       <div class="coverage-grid">
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>الدمام</h4>
             <p>جميع أحياء مدينة الدمام</p>
@@ -1379,7 +1366,7 @@
         </div>
 
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>الخبر</h4>
             <p>الخبر وضواحيها</p>
@@ -1387,7 +1374,7 @@
         </div>
 
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>الظهران</h4>
             <p>الظهران والمناطق المجاورة</p>
@@ -1395,7 +1382,7 @@
         </div>
 
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>الجبيل</h4>
             <p>الجبيل الصناعية والبحر</p>
@@ -1403,7 +1390,7 @@
         </div>
 
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>الأحساء</h4>
             <p>الهفوف والمبرز</p>
@@ -1411,7 +1398,7 @@
         </div>
 
         <div class="coverage-item">
-          <div class="coverage-icon">📍</div>
+          <div class="coverage-icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="coverage-text">
             <h4>القطيف</h4>
             <p>القطيف وصفوى</p>
@@ -1431,15 +1418,15 @@
 
       <div style="text-align: center; margin-top: 40px;">
         <div style="display: inline-block; background: rgba(212, 175, 55, 0.1); padding: 40px; border-radius: 20px; border: 2px solid var(--primary-gold);">
-          <h3 style="color: var(--primary-gold); font-size: 2rem; margin-bottom: 20px;">📞 0544581522</h3>
+          <h3 style="color: var(--primary-gold); font-size: 2rem; margin-bottom: 20px;"><i class="fas fa-phone-alt"></i> 0544581522</h3>
           <p style="color: #ddd; font-size: 1.1rem; margin-bottom: 30px;">متاح 24 ساعة لخدمتكم</p>
           
           <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <a href="tel:0544581522" class="cta-button" style="background: var(--gradient-gold);">
-              📞 اتصل الآن
+            <a href="tel:0544581522" class="service-call-btn" style="font-size: 1.1rem; padding: 15px 30px;">
+              <i class="fas fa-phone-alt"></i> اتصل الآن
             </a>
-            <a href="https://wa.me/966544581522" target="_blank" class="cta-button" style="background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: white;">
-              💬 واتساب
+            <a href="https://wa.me/966544581522" target="_blank" class="service-whatsapp-btn" style="font-size: 1.1rem; padding: 15px 30px;">
+              <i class="fab fa-whatsapp"></i> واتساب
             </a>
           </div>
         </div>
@@ -1447,9 +1434,9 @@
 
       <div style="margin-top: 50px; text-align: center;">
         <p style="color: #ddd; font-size: 1.1rem; line-height: 1.8;">
-          <strong style="color: var(--primary-gold);">عنواننا:</strong> المنطقة الشرقية - الدمام<br>
-          <strong style="color: var(--primary-gold);">ساعات العمل:</strong> 24 ساعة - 7 أيام في الأسبوع<br>
-          <strong style="color: var(--primary-gold);">البريد الإلكتروني:</strong> info@dalah-hospitality.com
+          <strong style="color: var(--primary-gold);"><i class="fas fa-map-marker-alt"></i> عنواننا:</strong> المنطقة الشرقية - الدمام<br>
+          <strong style="color: var(--primary-gold);"><i class="fas fa-clock"></i> ساعات العمل:</strong> 24 ساعة - 7 أيام في الأسبوع<br>
+          <strong style="color: var(--primary-gold);"><i class="fas fa-envelope"></i> البريد الإلكتروني:</strong> info@dalah-hospitality.com
         </p>
       </div>
     </div>
@@ -1463,10 +1450,10 @@
           <h3>دله الضيافة</h3>
           <p>شركة رائدة في تأجير مستلزمات الحفلات والمناسبات في المنطقة الشرقية. نقدم خدمات متكاملة بأعلى معايير الجودة والاحترافية.</p>
           <div class="social-links">
-            <a href="#" class="social-icon">📘</a>
-            <a href="#" class="social-icon">📷</a>
-            <a href="#" class="social-icon">🐦</a>
-            <a href="https://wa.me/966544581522" target="_blank" class="social-icon">💬</a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/966544581522" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -1496,11 +1483,11 @@
 
         <div class="footer-section">
           <h3>تواصل معنا</h3>
-          <p>📞 الهاتف: 0544581522</p>
-          <p>💬 واتساب: 0544581522</p>
-          <p>📧 البريد: info@dalah-hospitality.com</p>
-          <p>📍 العنوان: الدمام، المنطقة الشرقية</p>
-          <p>⏰ العمل: 24/7</p>
+          <p><i class="fas fa-phone-alt"></i> الهاتف: 0544581522</p>
+          <p><i class="fab fa-whatsapp"></i> واتساب: 0544581522</p>
+          <p><i class="fas fa-envelope"></i> البريد: info@dalah-hospitality.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> العنوان: الدمام، المنطقة الشرقية</p>
+          <p><i class="fas fa-clock"></i> العمل: 24/7</p>
         </div>
       </div>
 
